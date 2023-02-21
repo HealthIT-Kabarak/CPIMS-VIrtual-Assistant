@@ -154,12 +154,50 @@ The following metrics were used to evaluate the model:
   <h4>Precision:</h4> measures accuracy and consistency in a model, assessing how accurately the model can predict the true value of the target variable. It measures how many of the predictions made by the model were correct. Higher precision indicates more accurate predictions by the model.
 
   <h4>F1-score:</h4> combines precision and recall into a single score to assess the overall performance of the model. It takes into account both precision and recall to give an overall measure of how well the model is performing. Higher F1-score indicates better overall performance of the model.
+  <h4>Accuracy</h4>
+Accuracy is a metric that measures the proportion of correct predictions made by the model out of all predictions made. This metric was used to assess the overall performance of the model. The higher the accuracy, the better the performance of the model.
 
   <h3>Results from Different Metrics</h3>
-The accuracy of the model was evaluated using precision and F1-score metrics. Results of the evaluation will be presented in this section.
+The accuracy of the model was evaluated using accuracy metrics. Results of the evaluation will be presented in this section.
+  
+![](https://github.com/HealthIT-Kabarak/CPIMS-VIrtual-Assistant/blob/main/static/Images/image_3.jpg)
 
   <h3>Justification for Metrics Used</h3>
 The precision, recall, and F1-score metrics are useful for assessing the performance of a model. Precision measures accuracy, recall measures completeness, and F1-score combines these two metrics into a single score. Using these metrics allows for a more comprehensive assessment of the model's performance, helping to identify areas for improvement.
 
 
 </details>
+
+
+<details>
+  <summary><h2>Model Deployment</h2></summary>
+  
+Model deployment is the process of integrating a trained machine learning model into a production environment, where it can be used to make predictions or perform other tasks in real-time. The following outlines the deployment method used and the process of model deployment:
+
+  <h3>Deployment Method Used</h3>
+We used Flask for our model deployment because it is a lightweight web application framework that is commonly used for deploying machine learning models. Flask allows a trained model to be deployed in a web page which can then be accessed online by different users. Flask incorporates CSS, HTML, and JavaScript to come up with interactive web pages.
+
+  <h3>Process of Model Deployment</h3>
+The process of deploying the model involved the following steps:
+
+1. Installed Flask using pip: `pip install flask`
+2. Created a Flask application: We did this by creating a new Python file, importing the Flask module, creating a new instance of the Flask class, and defining a route for the application.
+3. Created a new Python file and imported the necessary modules such as pandas and scikit-learn for the machine learning model. We defined the model and loaded the necessary data.
+4. Created a new route in the Flask application that used the machine learning model to make predictions. We created a route that takes input data from a POST request and returns a JSON response with the predicted value.
+5. Saved the Python files and ran the Flask application using the following command in the command prompt:
+`export FLASK_APP=app.py`
+`flask run`
+6. Tested the model: Used an HTTP client to test the model by sending a POST request to the `/predict` endpoint with the input data in JSON format.
+7. The Flask application receives the request, uses the machine learning model to make a prediction, and returns a JSON response with the predicted value.
+  
+  </details>
+  
+  <details>
+  <summary><h2>Challenges</h2></summary>
+  
+- Cleaning the data
+- Inadequate dataset
+- Language barrier
+- Inadequate time
+  
+  </details>
